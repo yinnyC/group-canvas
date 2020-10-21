@@ -251,7 +251,48 @@
 			// 2, 4 Ryan 
 
 
-			// 3, 0 Starlight 
+			// 3, 0 Starlight
+			star_x = x * 3
+			star_y = y
+
+			ctx.beginPath()
+			ctx.rect(star_x, star_y, size, size)
+			ctx.fillStyle = 'rgb(44, 171, 42)'
+			ctx.fill()
+
+			ctx.beginPath()
+			ctx.arc(star_x + size / 2, star_y + size / 2, 40, 0, Math.PI * 2)
+			ctx.fillStyle = 'rgb(42, 148, 81)'
+			ctx.fill()
+
+			ctx.beginPath()
+			ctx.moveTo(star_x, star_y)
+			ctx.lineTo(star_x + 25, star_y + 75)
+			ctx.lineTo(star_x + 25, star_y + 25)
+			ctx.fillStyle = 'rgb(166, 230, 190)'
+			ctx.fill()
+
+			ctx.beginPath()
+			ctx.moveTo(star_x + size, star_y + size)
+			ctx.lineTo(star_x + size - 30, star_y + size - 60)
+			ctx.lineTo(star_x + size - 30, star_y + size - 10)
+			ctx.fillStyle = 'rgb(166, 230, 190)'
+			ctx.fill()
+
+			ctx.beginPath()
+			ctx.font = '24px Helvetica'
+			ctx.fillStyle = '#fff'
+			ctx.fillText('65', star_x + size/2, star_y + size/2)
+
+			ctx.beginPath()
+			ctx.font = '18px Helvetica'
+			ctx.fillStyle = '#fff'
+			ctx.fillText('BM', star_x + 2, star_y + size - 2)
+
+			ctx.beginPath()
+			ctx.font = '30px Helvetica'
+			ctx.fillStyle = '#fff'
+			ctx.fillText('$$$', star_x + size/6, star_y + 30)
 
 
 
