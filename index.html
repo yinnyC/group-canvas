@@ -80,7 +80,34 @@
 
 
 			// 2, 0 Dino 
+			const dino_x = 2 * size;
+			const dino_y = 0 * size;
 
+			// draw my canvas square
+			ctx.beginPath();
+			ctx.rect(dino_x,dino_y,size,size);
+			ctx.fillStyle = '#ffbad2';
+			ctx.fill();
+
+			// draw a little guy's head inside the square
+			ctx.beginPath();
+			ctx.arc(dino_x + size / 2, dino_y + 30, 25, 0, Math.PI * 2);
+			ctx.fillStyle = '#664455';
+			ctx.fill();
+
+			// draw his shoulders
+			ctx.beginPath();
+			ctx.arc(dino_x + size / 2, dino_y + 85, 30, Math.PI, 0);
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.rect(dino_x + size / 2 - 30,dino_y + 85, 60, 28);
+			ctx.fill();
+
+			ctx.beginPath()
+			ctx.font = '24px Helvetica';
+			ctx.fillStyle = '#eef';
+			ctx.fillText('Name', dino_x + size / 2 - 33, dino_y + size - 10);
 
 			// 2, 1 Jarquevious 
 
