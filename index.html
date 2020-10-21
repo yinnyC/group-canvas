@@ -25,7 +25,7 @@
 			ctx.fillStyle = 'tomato'
 			ctx.fill()
 
-			// draw a circle 
+			// draw a circle
 			ctx.beginPath()
 			// draw a complete circle
 			ctx.arc(x + size / 2, y + size / 2, 40, 0, Math.PI * 2)
@@ -45,11 +45,11 @@
 			ctx.font = '18px Helvetica'
 			ctx.fillStyle = '#fff'
 			ctx.fillText('Hello', x + 8, y + 20)
-			
+
 			// Use the docs to figure out how to draw other things
 			// https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
 
-			// 0, 0 Ernest 
+			// 0, 0 Ernest
 
 
 			// 1, 0 Jonathan
@@ -58,10 +58,58 @@
 			// 2, 0 Matthew
 
 
-			// 3, 0 Yin 
+			// 3, 0 Yin
+			const xYin = 3 * size
+			const YYin = 0 * size
+
+			// draw a square
+			ctx.beginPath()
+			ctx.rect(xYin, YYin, size, size)
+			ctx.fillStyle = 'pink'
+			ctx.fill()
 
 
-			// 4, 0 Ali 
+
+			// draw a circle
+			ctx.beginPath()
+			// draw a complete circle
+			ctx.arc(xYin + size / 2, YYin + size / 2+10, 40, Math.PI,0)
+			ctx.fillStyle = '#333'
+			ctx.fill()
+
+			// Draw left Ear
+			ctx.beginPath()
+			ctx.moveTo(xYin+20, YYin+15)
+			ctx.lineTo(xYin+20,YYin+50)
+			ctx.lineTo(xYin+40,YYin+30)
+			ctx.fillStyle = '#333'
+			ctx.fill()
+
+			// Draw left Ear
+			ctx.beginPath()
+			ctx.moveTo(xYin+95,YYin+15)
+			ctx.lineTo(xYin+95,YYin+55)
+			ctx.lineTo(xYin+70,YYin+35)
+			ctx.fillStyle = '#333'
+			ctx.fill()
+
+			// Stroke a path
+			ctx.beginPath()
+
+			// draw half a circle
+			ctx.rect(xYin + 13, YYin + 60, 87, 20)
+			ctx.lineWidth = 3
+			ctx.fillStyle = '#333'
+			// ctx.strokeStyle = '#333'
+			ctx.fill()
+
+			// Draw some text
+			ctx.beginPath()
+			ctx.font = '18px Helvetica'
+			ctx.fillStyle = '#fff'
+			ctx.fillText('Meow', xYin+32, YYin + 55)
+
+			// 4, 0 Ali
 
 
 			// 0, 1 Megan
@@ -70,7 +118,7 @@
 			// 1, 1 Philippos
 
 
-			// 1, 2 Cao 
+			// 1, 2 Cao
 
 
 			// 1, 3 Kash
@@ -79,22 +127,22 @@
 			// 1, 4 Zach
 
 
-			// 2, 0 Dino 
+			// 2, 0 Dino
 
 
-			// 2, 1 Jarquevious 
+			// 2, 1 Jarquevious
 
 
 			// 2, 2 Joanelly
-			
-			
+
+
 			// 2, 3 Alex
 
 
-			// 2, 4 Ryan 
+			// 2, 4 Ryan
 
 
-			// 3, 0 Starlight 
+			// 3, 0 Starlight
 
 
 
@@ -104,16 +152,16 @@
 			// 3, 2 Danika
 
 
-			// 3, 3 Luis 
+			// 3, 3 Luis
 
 
-			// 3, 4 Chao 
+			// 3, 4 Chao
 
 
-			// 4, 0 Jay 
+			// 4, 0 Jay
 
 
-			// 4, 1 Mario 
+			// 4, 1 Mario
 
 
 
