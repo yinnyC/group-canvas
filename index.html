@@ -178,7 +178,18 @@
 
 
 			// 2, 2 Joanelly
-			
+			ctx.beginPath()
+			ctx.arc(2 * size, 2 * size, 50, 0, 2 * Math.PI);
+			ctx.fillStyle = '#92D3CA'
+			ctx.fill()
+			ctx.arc(2 * size, 2 * size, 65, 10, 0, Math.PI);
+			ctx.fillStyle = '#DCDCDC';
+			ctx.fill()
+			ctx.stroke()
+
+			ctx.font = '17px Helvetica'
+			ctx.fillStyle = '#fff'
+			ctx.fillText('help', 2 * size, 2 * size )
 			
 			// 2, 3 Alex
 
