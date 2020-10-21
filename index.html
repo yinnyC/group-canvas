@@ -53,8 +53,73 @@
 
 
 			// 1, 0 Jonathan
+			//my position
+			const jwx = 1 * size
+			const jwy = 0 * size
 
+			// background square
+			drawRect(jwx, jwy, size, size, "#222222")
 
+			// stem
+			drawRect(jwx + (113 / 2) - 5, jwy + 15, 10, 25, "#FFFDD0")
+
+			// pumpkin
+			drawEllipse(jwx + (113 / 2), jwy + (113 / 2) + 10, 50, 40, "#FF7518")
+
+			// eyes black
+			drawCircle(jwx + (113 / 2) - 25, jwy + (113 / 2) - 5, 10, "#000000")
+			drawCircle(jwx + (113 / 2) + 15, jwy + (113 / 2) - 5, 10, "#000000")
+
+			// eyes white
+			drawCircle(jwx + (113 / 2) - 25, jwy + (113 / 2) - 5, 5, "#ffffff")
+			drawCircle(jwx + (113 / 2) + 15, jwy + (113 / 2) - 5, 5, "#ffffff")
+
+			// mouth
+			drawRect(jwx + (113 / 2) - 10, jwy + (113 / 2) + 15, 20, 10, "#000000")
+			drawRect(jwx + (113 / 2) - 5, jwy + (113 / 2) + 15, 10, 5, "#ffffff")
+
+			//signature
+			drawText(jwx, jwy, 30, "#fff")
+
+			// draw a rectangle
+			function drawRect(x, y, width, height, color) {
+				ctx.beginPath()
+				ctx.rect(x, y, width, height)
+				ctx.fillStyle = color
+				ctx.fill()
+			}
+
+			// draw a circle
+			function drawCircle(x, y, size, color) {
+				ctx.beginPath()
+				ctx.arc(x + size / 2, y + size / 2, size, 0, Math.PI * 2)
+				ctx.fillStyle = color
+				ctx.fill()
+			}
+
+			function drawText(x, y, size, color) {
+				ctx.beginPath()
+				ctx.font = '7px Helvetica'
+				ctx.fillStyle = color
+				ctx.fillText('Jonathan W.', x + 70, y + 10)
+			}
+
+			// draw an ellipse
+			// taken from:
+			//https://stackoverflow.com/questions/2172798/how-to-draw-an-oval-in-html5-canvas
+			function drawEllipse(cx, cy, rx, ry, color) {
+				ctx.save(); // save state
+				ctx.beginPath();
+
+				ctx.translate(cx - rx, cy - ry);
+				ctx.scale(rx, ry);
+				ctx.arc(1, 1, 1, 0, 2 * Math.PI, false);
+
+				ctx.restore(); // restore to original state
+				ctx.fillStyle = color
+				ctx.fill();
+			}
+			
 			// 2, 0 Matthew
 
 
@@ -113,6 +178,60 @@
 
 
 			// 0, 1 Megan
+			const megx = 0
+			const megy = 1 * size
+
+			// draw a square
+			ctx.beginPath()
+			ctx.rect(megx, megy, size, size)
+			ctx.fillStyle = 'cyan'
+			ctx.fill()
+
+			// draw bread
+			ctx.beginPath()
+			ctx.rect(megx + 18, megy + 33, size - 36, size - 40)
+			ctx.fillStyle = '#8B4513'
+			ctx.fill()
+            ctx.strokeStyle = '#000'
+            ctx.stroke()
+
+            // draw bread
+            ctx.beginPath()
+            ctx.arc(megx + size / 2, megy + 48, size / 2 - 15, Math.PI-0.4, Math.PI * 2+0.4)
+            ctx.fillStyle = '#8B4513'
+            ctx.fill()
+            ctx.strokeStyle = '#000'
+            ctx.stroke()
+
+            // draw egg white
+            ctx.beginPath()
+            ctx.arc(megx + size / 2, megy + size / 2+3, 30, 0, Math.PI * 2)
+            ctx.fillStyle = '#fff'
+            ctx.fill()
+
+            // draw egg yolk
+            ctx.beginPath()
+            ctx.arc(megx + size / 2, megy + size / 2+3, 10, 0, Math.PI * 2)
+            ctx.fillStyle = '#DAA520'
+            ctx.fill()
+
+            // draw egg shiny
+            ctx.beginPath()
+            ctx.arc(megx + size / 2 - 3, megy + size / 2, 4, Math.PI / 2, -Math.PI / 2)
+            ctx.fillStyle = '#fff'
+            ctx.fill()
+            
+			// Draw some text
+			ctx.beginPath()
+			ctx.font = '24px Helvetica'
+			ctx.fillStyle = 'blue'
+			ctx.fillText('Nice to', megx + 20, megy + 30)
+
+			// Draw some text
+			ctx.beginPath()
+			ctx.font = '24px Helvetica'
+			ctx.fillStyle = 'blue'
+			ctx.fillText('eat you', megx + 20, size + megy - 5)
 
 
 			// 1, 1 Philippos
@@ -127,15 +246,54 @@
 			// 1, 4 Zach
 
 
-			// 2, 0 Dino
 
+			// 2, 0 Dino 
+			const dino_x = 2 * size;
+			const dino_y = 0 * size;
+
+			// draw my canvas square
+			ctx.beginPath();
+			ctx.rect(dino_x,dino_y,size,size);
+			ctx.fillStyle = '#ffbad2';
+			ctx.fill();
+
+			// draw a little guy's head inside the square
+			ctx.beginPath();
+			ctx.arc(dino_x + size / 2, dino_y + 30, 25, 0, Math.PI * 2);
+			ctx.fillStyle = '#664455';
+			ctx.fill();
+
+			// draw his shoulders
+			ctx.beginPath();
+			ctx.arc(dino_x + size / 2, dino_y + 85, 30, Math.PI, 0);
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.rect(dino_x + size / 2 - 30,dino_y + 85, 60, 28);
+			ctx.fill();
+
+			ctx.beginPath()
+			ctx.font = '24px Helvetica';
+			ctx.fillStyle = '#eef';
+			ctx.fillText('Name', dino_x + size / 2 - 33, dino_y + size - 10);
 
 			// 2, 1 Jarquevious
 
 
 			// 2, 2 Joanelly
+			ctx.beginPath()
+			ctx.arc(2 * size, 2 * size, 50, 0, 2 * Math.PI);
+			ctx.fillStyle = '#92D3CA'
+			ctx.fill()
+			ctx.arc(2 * size, 2 * size, 65, 10, 0, Math.PI);
+			ctx.fillStyle = '#DCDCDC';
+			ctx.fill()
+			ctx.stroke()
 
-
+			ctx.font = '17px Helvetica'
+			ctx.fillStyle = '#fff'
+			ctx.fillText('help', 2 * size, 2 * size )
+			
 			// 2, 3 Alex
 
 
@@ -143,11 +301,108 @@
 
 
 			// 3, 0 Starlight
+			star_x = x * 3
+			star_y = y
+
+			ctx.beginPath()
+			ctx.rect(star_x, star_y, size, size)
+			ctx.fillStyle = 'rgb(44, 171, 42)'
+			ctx.fill()
+
+			ctx.beginPath()
+			ctx.arc(star_x + size / 2, star_y + size / 2, 40, 0, Math.PI * 2)
+			ctx.fillStyle = 'rgb(42, 148, 81)'
+			ctx.fill()
+
+			ctx.beginPath()
+			ctx.moveTo(star_x, star_y)
+			ctx.lineTo(star_x + 25, star_y + 75)
+			ctx.lineTo(star_x + 25, star_y + 25)
+			ctx.fillStyle = 'rgb(166, 230, 190)'
+			ctx.fill()
+
+			ctx.beginPath()
+			ctx.moveTo(star_x + size, star_y + size)
+			ctx.lineTo(star_x + size - 30, star_y + size - 60)
+			ctx.lineTo(star_x + size - 30, star_y + size - 10)
+			ctx.fillStyle = 'rgb(166, 230, 190)'
+			ctx.fill()
+
+			ctx.beginPath()
+			ctx.font = '24px Helvetica'
+			ctx.fillStyle = '#fff'
+			ctx.fillText('65', star_x + size/2, star_y + size/2)
+
+			ctx.beginPath()
+			ctx.font = '18px Helvetica'
+			ctx.fillStyle = '#fff'
+			ctx.fillText('BM', star_x + 2, star_y + size - 2)
+
+			ctx.beginPath()
+			ctx.font = '30px Helvetica'
+			ctx.fillStyle = '#fff'
+			ctx.fillText('$$$', star_x + size/6, star_y + 30)
 
 
 
 			// 3, 1 Chris
+			const size = 113
+			const x = 3 * size
+			const y = 1 * size
 
+			// draw a square
+			ctx.beginPath()
+			ctx.rect(x, y, size, size)
+            		ctx.fillStyle = 'black'
+            		ctx.fill()
+
+			// draw a circle 
+			ctx.beginPath()
+			// draw a complete circle
+			ctx.arc(x + size / 2, y + size / 2, 50, 0, Math.PI * 2)
+			ctx.fillStyle = '#aaaaaa'
+            		ctx.fill()
+
+            		// draw a circle 
+			ctx.beginPath()
+			// draw a complete circle
+			ctx.arc(x + size / 2, y + size / 2, 40, 0, Math.PI * 2)
+			ctx.fillStyle = '#bbbbbb'
+           		 ctx.fill()
+            
+			// draw a circle 
+			ctx.beginPath()
+			// draw a complete circle
+			ctx.arc(x + size / 2, y + size / 2, 30, 0, Math.PI * 2)
+			ctx.fillStyle = '#cccccc'
+		    	ctx.fill()
+
+			// draw a circle 
+			ctx.beginPath()
+			// draw a complete circle
+			ctx.arc(x + size / 2, y + size / 2, 20, 0, Math.PI * 2)
+			ctx.fillStyle = '#dddddd'
+            		ctx.fill()
+
+			// draw a circle 
+			ctx.beginPath()
+			// draw a complete circle
+			ctx.arc(x + size / 2, y + size / 2, 10, 0, Math.PI * 2)
+			ctx.fillStyle = '#eeeeee'
+           		 ctx.fill()
+
+           		 // draw a circle 
+			ctx.beginPath()
+			// draw a complete circle
+			ctx.arc(x + size / 2, y + size / 2, 5, 0, Math.PI * 2)
+			ctx.fillStyle = '#ffffff'
+           		 ctx.fill()
+
+			// Draw some text
+			ctx.beginPath()
+			ctx.font = '18px Helvetica'
+			ctx.fillStyle = 'white'
+            		ctx.fillText('chris says hi', x + 8, y + 55)
 
 			// 3, 2 Danika
 
@@ -166,6 +421,68 @@
 
 
 			// 4, 2 Anneka
+			const canvas = document.querySelector('canvas')
+			const ctx = canvas.getContext('2d')
+
+			const size = 113
+			let x = 4 * size
+			let y = 2 * size
+
+			// draw a square
+			ctx.beginPath()
+			ctx.rect(x, y, size, size)
+			ctx.fillStyle = 'mistyrose'
+			ctx.fill()
+
+			// draw a circle 
+			ctx.beginPath()
+			// draw a complete circle
+			ctx.arc(x + size / 2, y + size / 1.6, 40, 0, Math.PI * 2)
+			ctx.fillStyle = 'tomato'
+			ctx.fill()
+
+			// Stroke a path
+			ctx.beginPath()
+			// draw half a circle
+			ctx.arc(x + size / 2.5, y + size / 1.4, 10, 0, Math.PI)
+			ctx.lineWidth = 3
+			ctx.strokeStyle = '#ffeeee'
+			ctx.stroke()
+
+           		 ctx.beginPath()
+			// draw half a circle
+			ctx.arc(x + size / 1.7, y + size / 1.4, 10, 0, Math.PI)
+			ctx.lineWidth = 3
+			ctx.strokeStyle = '#ffeeee'
+			ctx.stroke()
+
+            		ctx.beginPath();
+            		ctx.rect(470,228,30,60)
+            		ctx.fillStyle = "tomato"
+            		ctx.fill();
+
+            		ctx.beginPath();
+            		ctx.rect(515,228,30,60)
+            		ctx.fillStyle = "tomato"
+            		ctx.fill();
+
+           		ctx.beginPath()
+			// draw a complete circle
+			ctx.arc(x + size / 1.6, y + size / 1.8, 7, 0, Math.PI * 2)
+			ctx.fillStyle = '#ffeeee'
+			ctx.fill()
+
+            		ctx.beginPath()
+			// draw a complete circle
+			ctx.arc(x + size / 2.6, y + size / 1.8, 7, 0, Math.PI * 2)
+			ctx.fillStyle = '#ffeeee'
+			ctx.fill()
+
+			// Draw some text
+			ctx.beginPath()
+			ctx.font = '18px Helvetica'
+			ctx.fillStyle = 'purple'
+			ctx.fillText('Pyon!', x + 8, y + 20)
 
 
 			// 4, 3 Gobind
